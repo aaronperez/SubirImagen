@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SubirImagenes</string>
+    <string name="guardarComo">Guardar como:</string>
+    <string name="guardarDonde">Guardar en:</string>
+    <string name="urlInsert">Insert URL</string>
+    <string name="url">URL:</string>
+    <string name="MEPr">Memoria Externa Privada</string>
+    <string name="MEPu">Memoria Externa Pública</string>
+    <string name="descargar">Descargar</string>
+    <string name="descargando">Descargando imagen</string>
+    <string name="errorTipoArchivo">Nombre de archivo erróneo, use archivos .jpg, .jpeg, .gif o .png</string>
+    <string name="errorNombreVacio">Escriba una URL</string>
+    <string name="errorFormato">Corrija extensión. Extensión URL y extensión de guardado distintas</string>
+
+
+</resources>

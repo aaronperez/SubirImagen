@@ -1,0 +1,113 @@
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight=".5"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:background="#253240">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etURL"
+        android:layout_toEndOf="@+id/tvURL"
+        android:layout_alignBottom="@+id/tvURL"
+        android:layout_toRightOf="@+id/tvURL"
+        android:textColor="#ffffffff" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etComo"
+        android:layout_below="@+id/tvComo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp"
+        android:textColor="#ffffffff" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rgGrupo" >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/MEPu"
+            android:id="@+id/rbPublico"
+            android:layout_gravity="center_horizontal"
+            android:checked="true"
+            android:tag="0"
+            android:textColor="#ffffffff" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/MEPr"
+            android:id="@+id/rbPrivado"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:tag="1"
+            android:textColor="#ffffffff" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/url"
+        android:id="@+id/tvURL"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/guardarComo"
+        android:id="@+id/tvComo"
+        android:layout_below="@+id/tvURL"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/guardarDonde"
+        android:id="@+id/textView"
+        android:layout_below="@+id/etComo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/descargar"
+        android:id="@+id/bDescargar"
+        android:layout_below="@+id/rgGrupo"
+        android:layout_centerHorizontal="true"
+        android:onClick="descargar"
+        android:textColor="#ffffffff"
+        android:background="#1f2b3a" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/ivImagen"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/fondo"
+        android:layout_below="@+id/bDescargar" />
+</RelativeLayout>
