@@ -104,7 +104,8 @@
             android:layout_centerHorizontal="true"
             android:onClick="descargar"
             android:textColor="#ffffffff"
-            android:background="#1f2b3a" />
+            android:background="#1f2b3a"
+            android:padding="5dp" />
     </RelativeLayout>
 
     <RelativeLayout
