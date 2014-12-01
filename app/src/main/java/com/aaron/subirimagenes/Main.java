@@ -24,12 +24,20 @@ public class Main extends Activity {
     private EditText etURL,etComo;
     private ImageView ivImagen;
     private HiloFacil hf=null;
+    private Bitmap bmImagen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         initComponent();
+        if (savedInstanceState != null) {
+            bmImagen = savedInstanceState.getParcelable("bitmap");
+            ivImagen.setImageBitmap(bmImagen);
+        }
+        else{
+            ivImagen.setImageDrawable(getResources().getDrawable(R.drawable.fondo));
+        }
     }
 
     public void initComponent(){
@@ -37,6 +45,12 @@ public class Main extends Activity {
         etComo=(EditText)findViewById(R.id.etComo);
         ivImagen=(ImageView)findViewById(R.id.ivImagen);
         rbGrupo=(RadioGroup)findViewById(R.id.rgGrupo);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle b) {
+        super.onSaveInstanceState(b);
+        b.putParcelable("bitmap", bmImagen);
     }
 
     //Lanza un hilo para no bloquear el teléfono durante la carga de la imagen
@@ -123,6 +137,7 @@ public class Main extends Activity {
         @Override
         protected void onPostExecute(Bitmap bm) {
             super.onPostExecute(bm);
+            bmImagen=bm;
             ivImagen.setImageBitmap(bm);
             dialogo.dismiss();
             FileOutputStream salida = null;
